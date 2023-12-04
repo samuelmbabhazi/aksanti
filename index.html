@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css?family=Kaushan+Script|Source+Sans+Pro"
@@ -14,13 +15,19 @@
         /* outline:1px solid ;*/
       }
       body {
-        background: #ffffff;
-        background: linear-gradient(to bottom, #ffffff 0%, #e1e8ed 100%);
+        background: #ffffff; /* background: linear-gradient(to bottom, #ffffff 0%, #e1e8ed 100%); */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e8ed',GradientType=0 );
         height: 100%;
         margin: 0;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+
+        background-image: linear-gradient(
+            35deg,
+            rgba(0, 0, 0, 0.8) 82%,
+            rgba(0, 0, 0, 0.3) 94%
+          ),
+          url(./kabuzi.jpeg);
+        background-size: cover;
+        background-position: center center;
       }
 
       .wrapper-1 {
@@ -35,17 +42,21 @@
       }
       h1 {
         font-family: "Kaushan Script", cursive;
-        font-size: 4em;
+        font-size: 8em;
         letter-spacing: 3px;
         /* color: #5892ff; */
-        color: black;
+        color: #f4c200;
         margin: 0;
         margin-bottom: 20px;
+      }
+      .title_1 {
+        color: white;
+        font-size: 2.8em;
       }
       .wrapper-2 p {
         margin: 0;
         font-size: 1.3em;
-        color: #aaa;
+        color: rgba(255, 255, 255, 0.795);
         font-family: "Source Sans Pro", sans-serif;
         letter-spacing: 1px;
         margin-bottom: 20px;
@@ -53,7 +64,7 @@
       .go-home {
         color: #fff;
         /* background: #5892ff; */
-        background: black;
+        background: #16004f;
         border: none;
         padding: 10px 50px;
         margin: 50px 0;
@@ -64,7 +75,7 @@
       }
       .footer-like {
         margin-top: auto;
-        background: #d7e6fe;
+        background: #f4c200;
         padding: 6px;
         text-align: center;
       }
@@ -79,7 +90,7 @@
       .footer-like p a {
         text-decoration: none;
         /* color: #5892ff; */
-        color: black;
+        color: #16004f;
         font-weight: 600;
       }
 
@@ -111,14 +122,18 @@
     <div class="content">
       <div class="wrapper-1">
         <div class="wrapper-2">
-          <h1>Merci Goma !</h1>
-          <h1>Aksanti Goma !</h1>
-          <p>Le moment est venu de façonner l'avenir de notre ville.</p>
-          <p>Ensemble, faisons entendre notre voix pour un avenir meilleur!</p>
+          <h1 class="title_1">Nina voter pour le changement</h1>
+          <h1 class="title_1">
+            Nda voter
+            <span style="color: #f4c200; font-size: 1.1em">Aksanti Kabuzi </span
+            >numero
+          </h1>
+          <h1>72</h1>
+
           <a
-            href="https://www.google.com/calendar/render?action=TEMPLATE&text=Votez pour mon avenir&dates=20231220T080000Z/20231220T180000Z&details=Ne manquez pas les élections pour choisir vos députés et faire entendre votre voix. Votre vote compte !&location=Goma%2C%20RDC&ctz=Africa%2FLubumbashi&reminders=1440"
+            href="https://www.google.com/calendar/render?action=TEMPLATE&text=Nda voter Aksanti Kabuzi&dates=20231220T080000Z/20231220T180000Z&details=Nina voter pour le changement!&location=Goma%2C%20RDC&ctz=Africa%2FLubumbashi&reminders=1440"
             class="go-home"
-            >Je veux le changement</a
+            >NIKUMBUSHE</a
           >
         </div>
         <div class="footer-like">
@@ -129,5 +144,21 @@
         </div>
       </div>
     </div>
+    <script>
+      function enterFullscreen() {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+          document.documentElement.msRequestFullscreen();
+        }
+      }
+
+      // Appelle la fonction enterFullscreen() lorsque le document est chargé
+      window.addEventListener("load", enterFullscreen);
+    </script>
   </body>
 </html>
